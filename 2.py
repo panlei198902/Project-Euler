@@ -4,6 +4,8 @@ while True:
     b=a[i]+a[i+1]
     a.append(b)
     i+=1
-    if len(a)>=4000000:
+    if max(a)>=4000000:
+        a.pop()
         break
-print sum(a)
+b=a[1::3]
+print sum(b)
